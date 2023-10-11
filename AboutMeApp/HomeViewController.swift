@@ -11,13 +11,11 @@ import UIKit
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var user = ""
+    var userInHomeVC = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome,\(user)! "
+        welcomeLabel.text = "Welcome,\(userInHomeVC)! "
     }
     
-    
-
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -44,8 +45,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGF-GO-5a8"/>
-                                                    <segue destination="3cC-zz-23l" kind="show" id="AXn-9q-bXr"/>
+                                                    <segue destination="UJx-on-nGD" kind="presentation" id="pN4-xD-uv6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -105,21 +105,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571.75572519083971" y="-146.47887323943664"/>
+            <point key="canvasLocation" x="450" y="-146"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="kuk-3G-Srf">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="3cC-zz-23l" customClass="HomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeVC" id="HXN-XH-uQY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="IMAGE 2023-10-08 21:43:57" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-WS-5ZU">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="198" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Pg-tJQ">
-                                <rect key="frame" x="99.666666666666686" y="125" width="194" height="602"/>
+                                <rect key="frame" x="99.666666666666686" y="120" width="194" height="602"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zxo-me-7vP">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="48.666666666666664"/>
@@ -162,6 +162,9 @@
                             <constraint firstItem="Ygq-Pg-tJQ" firstAttribute="centerY" secondItem="HXN-XH-uQY" secondAttribute="centerY" id="sEC-W8-tFh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="ZTu-nM-Hyx">
+                        <imageReference key="image" image="person.fill" catalog="system" variableValue="0.20000000000000007"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="KIb-Ha-hkn"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="zxo-me-7vP" id="Zdu-la-blc"/>
@@ -170,14 +173,239 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgl-03-9M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Xfw-pi-HJh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1290.8396946564885" y="-146.47887323943664"/>
+            <point key="canvasLocation" x="1239" y="571"/>
+        </scene>
+        <!--Mark Rothko-->
+        <scene sceneID="Fd6-sF-eRO">
+            <objects>
+                <viewController id="PLP-Pb-mH8" customClass="PersonInfoViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Fd-Kc-Woh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-hh-lcX">
+                                <rect key="frame" x="135" y="133" width="123" height="128"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ly-25-Lzn">
+                                <rect key="frame" x="20" y="314.33333333333331" width="194.66666666666666" height="213.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="f8m-kr-pNK">
+                                        <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="20.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-O3-JfM">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-QJ-gGC">
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" baselineRelativeArrangement="NO"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-f7-K0O">
+                                        <rect key="frame" x="0.0" y="48.333333333333371" width="194.66666666666666" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-XU-nk0">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLb-WT-NFU">
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" baselineRelativeArrangement="NO"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-io-bRZ">
+                                        <rect key="frame" x="0.0" y="96.666666666666686" width="194.66666666666666" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Types of art:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sj-w9-7yh">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ak-YZ-Mjk">
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" baselineRelativeArrangement="NO"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="6Zu-sQ-64Y">
+                                        <rect key="frame" x="0.0" y="145" width="194.66666666666666" height="20.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Styles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfF-rn-UJ2">
+                                                <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A9-Kx-FRM">
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" baselineRelativeArrangement="NO"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="cYn-Fg-LYa">
+                                        <rect key="frame" x="0.0" y="193.33333333333337" width="194.66666666666666" height="20.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svP-SA-8U8">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nb-TM-AT5">
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" baselineRelativeArrangement="NO"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fYZ-H2-MdE">
+                                <rect key="frame" x="137" y="606" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">“I'm not an abstractionist. I'm not interested in the relationship of color or form or anything else. I'm interested only in expressing basic human emotions: tragedy, ecstasy, doom, and so on.”(c)</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kFG-xb-Hob"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kFG-xb-Hob" firstAttribute="trailing" secondItem="fYZ-H2-MdE" secondAttribute="trailing" constant="16" id="64T-np-USY"/>
+                            <constraint firstItem="dHQ-hh-lcX" firstAttribute="leading" secondItem="kFG-xb-Hob" secondAttribute="leading" constant="135" id="MwD-Vm-SXR"/>
+                            <constraint firstItem="7ly-25-Lzn" firstAttribute="centerY" secondItem="2Fd-Kc-Woh" secondAttribute="centerY" id="OHO-vP-lLA"/>
+                            <constraint firstItem="kFG-xb-Hob" firstAttribute="bottom" secondItem="fYZ-H2-MdE" secondAttribute="bottom" constant="69" id="Syq-0K-dTB"/>
+                            <constraint firstItem="kFG-xb-Hob" firstAttribute="trailing" secondItem="dHQ-hh-lcX" secondAttribute="trailing" constant="135" id="VPT-hY-bQG"/>
+                            <constraint firstItem="7ly-25-Lzn" firstAttribute="leading" secondItem="kFG-xb-Hob" secondAttribute="leading" constant="20" id="hNI-wg-piN"/>
+                            <constraint firstItem="fYZ-H2-MdE" firstAttribute="leading" secondItem="kFG-xb-Hob" secondAttribute="leading" constant="137" id="zMK-aW-HUm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mark Rothko" id="m5z-Es-Pfj">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="xTv-pP-Rh9">
+                            <connections>
+                                <segue destination="PUl-yL-6Qy" kind="show" id="qf6-Bw-0ga"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageOfPerson" destination="dHQ-hh-lcX" id="24w-Ph-ENr"/>
+                        <outlet property="personName" destination="ixS-QJ-gGC" id="Ok9-G7-bC9"/>
+                        <outlet property="personSurname" destination="QLb-WT-NFU" id="qMi-4a-4TJ"/>
+                        <outlet property="plots" destination="6nb-TM-AT5" id="xjH-Va-ID6"/>
+                        <outlet property="quote" destination="fYZ-H2-MdE" id="VOW-75-DBm"/>
+                        <outlet property="styles" destination="0A9-Kx-FRM" id="iWj-md-bXz"/>
+                        <outlet property="typesOfArt" destination="9Ak-YZ-Mjk" id="ed5-gu-Iot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6M7-4X-5b3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2783.969465648855" y="586.61971830985919"/>
+        </scene>
+        <!--Mark Rothko Bio-->
+        <scene sceneID="Hss-Ml-K6T">
+            <objects>
+                <viewController id="PUl-yL-6Qy" customClass="BiographyViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyO-5R-8JD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Mqw-Ew-IuS">
+                                <rect key="frame" x="55" y="166" width="283" height="571"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Mark Rothko, real name Markus Yakovlevich Rotkovich; September 25, 1903, Dvinsk, Vitebsk province (now Daugavpils, Latvia) – February 25, 1970, New York) was an American artist from a family of Russian Jews. Included in the "holy Trinity" of abstract expressionism (together with Jackson Pollock and Willem de Kooning). Despite the phenomenal demand during his lifetime, he was tortured by depression, addiction to tobacco and alcohol. At the peak of his career, he opened his veins, taking an exorbitant dose of antidepressants to be sure. He is known as one of the legislators of color field painting.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zuU-Xi-8L1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mqw-Ew-IuS" firstAttribute="leading" secondItem="zuU-Xi-8L1" secondAttribute="leading" constant="55" id="Yyj-Ux-HAm"/>
+                            <constraint firstItem="zuU-Xi-8L1" firstAttribute="trailing" secondItem="Mqw-Ew-IuS" secondAttribute="trailing" constant="55" id="bUM-pP-P5n"/>
+                            <constraint firstItem="Mqw-Ew-IuS" firstAttribute="centerY" secondItem="lyO-5R-8JD" secondAttribute="centerY" id="q0K-yE-4ay"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mark Rothko Bio" id="dIk-9l-td0"/>
+                    <connections>
+                        <outlet property="biography" destination="Mqw-Ew-IuS" id="iE0-aw-Gb8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zc4-L1-8rK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3568.7022900763359" y="586.61971830985919"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0kN-Vd-O0O">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UJx-on-nGD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Pb8-ql-4Q5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cmc-RU-L7j">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3cC-zz-23l" kind="relationship" relationship="viewControllers" id="IOq-M5-lHJ"/>
+                        <segue destination="Odf-0q-98r" kind="relationship" relationship="viewControllers" id="Hjo-di-cn6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sP-bw-u0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240" y="-146"/>
+        </scene>
+        <!--Mark Rothko-->
+        <scene sceneID="afM-9O-JIv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Odf-0q-98r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mark Rothko" image="person.fill" catalog="system" id="f2m-uw-i9s"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GgR-hK-g3g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PLP-Pb-mH8" kind="relationship" relationship="rootViewController" id="asM-mr-LhL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UII-6A-s98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="587"/>
         </scene>
     </scenes>
     <resources>
         <image name="IMAGE 2023-10-08 21:43:57" width="630" height="960"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
