@@ -11,11 +11,11 @@ import UIKit
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var welcomeText: String!
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = welcomeText
+        welcomeLabel.text = "Welcome,\(user)! "
     }
     
     
